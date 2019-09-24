@@ -1,0 +1,35 @@
+{
+  "name": "alib-aquery",
+  "version": "1.0.0",
+  "description": "alib-aquery is a high performance, chainable array querying library that is extensible to support any type of filtering. It supports filter (in place of where), limit, offset and order by. It is inspired by the SQL SELECT statement but for arrays of objects.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pastyman/alib-aquery.git"
+  },
+  "keywords": [
+    "filter",
+    "limit",
+    "offset",
+    "order",
+    "by",
+    "fast",
+    "alib"
+  ],
+  "author": "Paris Val Baker",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pastyman/alib-aquery/issues"
+  },
+  "homepage": "https://github.com/pastyman/alib-aquery#readme",
+  "dependencies": {
+    "alib-hashtable": "^1.1.2"
+  }
+}

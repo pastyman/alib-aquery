@@ -112,6 +112,23 @@ var data5t3 = [
     { color: 'orange', size: 11},
     { color: 'green', size: 16 },
 ];
+var data5t4 = [
+    { color: 'orange', size: 11},
+    { color: 'blue' , size: 15 },
+    { color: 'green', size: 16 },
+    { color: 'red', size: 18},
+    { color: 'purple', size: 23},
+    { color: 'rouge', size: 44},
+];
+var data5t5 = [
+    { color: 'rouge', size: 44},
+    { color: 'purple', size: 23},
+    { color: 'red', size: 18},
+    { color: 'green', size: 16 },
+    { color: 'blue' , size: 15 },
+    { color: 'orange', size: 11},
+];
+
 
 describe('#aquery(data).filter(\'size\', \'gt\', 10).run()', function () {
     it('should return an array of items having the prop \'size\' greater than 10:', function () {
@@ -194,6 +211,20 @@ describe('#aquery(data5).filter(\'size\', \'gt\', 10).orderBy(\'color\', \'asc\'
     it('should return items (offset 2 limit 3) ordered by color ASC with size greater than 10:', function () {
         var result = aquery(data5).filter('size', 'gt', 10).orderBy('color', 'asc', 'string').offset(2).limit(3).run();
         assert.deepEqual(result, data5t3);
+    });
+});
+
+describe('#aquery(data5).filter(\'size\', \'gt\', 10).orderBy(\'size\', \'desc\', \'string\').run()', function () {
+    it('should return items ordered by size DESC with size greater than 10:', function () {
+        var result = aquery(data5).filter('size', 'gt', 10).orderBy('size', 'desc', 'string').run();
+        assert.deepEqual(result, data5t4);
+    });
+});
+
+describe('#aquery(data5).filter(\'size\', \'gt\', 10).orderBy(\'size\', \'asc\', \'string\').run()', function () {
+    it('should return items ordered by size ASC with size greater than 10:', function () {
+        var result = aquery(data5).filter('size', 'gt', 10).orderBy('size', 'asc', 'string').run();
+        assert.deepEqual(result, data5t5);
     });
 });
 

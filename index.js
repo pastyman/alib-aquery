@@ -104,23 +104,21 @@ module.exports = function alibFilter(arrayToFilter) {
     orderByProp = prop;
 
     //ordering functions
-    var comp_string_desc = function (a, b) {
-      if (typeof a !== 'string') a = String(a);
-      if (typeof b !== 'string') b = String(b);
+    var comp_desc = function (a, b) {
       return a > b ? 1 : (a < b ? -1 : 0);
     };
-    var comp_string_asc = function (a, b) {
-      if (typeof a !== 'string') a = String(a);
-      if (typeof b !== 'string') b = String(b);
+    var comp_asc = function (a, b) {
       return a > b ? -1 : (a < b ? 1 : 0);
     };
 
     if (direction === 'desc') {
-      orderByComparator = comp_string_desc;
+      orderByComparator = comp_desc;
     }
     if (direction === 'asc') {
-      orderByComparator = comp_string_asc;
+      orderByComparator = comp_asc;
     }
+
+    
 
     return this;
   }

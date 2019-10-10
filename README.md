@@ -29,7 +29,7 @@ var data = [
 ];
 
 var result = aquery(data).filter('size', 'gt', 10).run();
-// return an array of items having the prop \'size\' greater than 10
+// return an array of items having the prop 'size' greater than 10
 // [
 //     { color: 'blue', size: 44 },
 //     { color: 'green', size: 12 },
@@ -39,7 +39,7 @@ var result = aquery(data).filter('size', 'gt', 10).run();
 // ]
 
 var result = aquery(data).filter('size', 'gt', 10).filter('color', 'eq', 'blue').run();
-// return an array of items having the prop \'size\' greater than 10 and color blue:
+// return an array of items having the prop 'size' greater than 10 and color blue:
 // [
 //     { color: 'blue', size: 44 },
 //     { color: 'blue', size: 12 },

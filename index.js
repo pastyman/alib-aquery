@@ -71,7 +71,7 @@ module.exports = function alibFilter(arrayToFilter) {
       name: name,
       func: func
     });
-  }
+  };
 
   //add a filter
   //////////////////////////////////////////////////////////////////////////////////////////
@@ -92,12 +92,13 @@ module.exports = function alibFilter(arrayToFilter) {
     limitVal = limit;
 
     return this;
-  }
+  };
+
   var offset = function (offset) {
     offsetVal = offset;
 
     return this;
-  }
+  };
 
   var orderBy = function (prop, direction, type) {
     orderBySet = true;
@@ -118,10 +119,8 @@ module.exports = function alibFilter(arrayToFilter) {
       orderByComparator = comp_asc;
     }
 
-    
-
     return this;
-  }
+  };
 
   function insertSorted(arr, item) {
     // get the index we need to insert the item at
@@ -208,7 +207,6 @@ module.exports = function alibFilter(arrayToFilter) {
           insertSorted(resultsOrderBy, arrayToFilter[i]);
         }
       }
-
     }
 
     if (!orderBySet) {
@@ -233,5 +231,4 @@ module.exports = function alibFilter(arrayToFilter) {
     registerFilter: registerFilter,
     run: run
   };
-
 };

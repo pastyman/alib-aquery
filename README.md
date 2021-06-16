@@ -45,6 +45,28 @@ var result = aquery(data).filter('size', 'gt', 10).filter('color', 'eq', 'blue')
 //     { color: 'blue', size: 12 },
 // ]
 
+
+var result = aquery(data).filter('size', 'gt', 10).orderBy('size', 'desc').run();
+// return an array of items having the prop 'size' greater than 10 ordered by size descending:
+// [
+//     { color: 'green', size: 12 },
+//     { color: 'blue', size: 12 },
+//     { color: 'black', size: 12 },
+//     { color: 'red', size: 18 },
+//     { color: 'blue', size: 44 },
+// ]
+
+var result = aquery(data).filter('size', 'gt', 10).orderBy('size', 'asc').run();
+// return an array of items having the prop 'size' greater than 10 ordered by size ascending:
+// [
+//     { color: 'blue', size: 44 },
+//     { color: 'red', size: 18 },
+//     { color: 'green', size: 12 },
+//     { color: 'blue', size: 12 },
+//     { color: 'black', size: 12 },
+// ]
+
+
 ```
 
 Built in filter functions are: 

@@ -129,7 +129,6 @@ var data5t5 = [
     { color: 'orange', size: 11},
 ];
 
-
 describe('#aquery(data).filter(\'size\', \'gt\', 10).run()', function () {
     it('should return an array of items having the prop \'size\' greater than 10:', function () {
         var result = aquery(data).filter('size', 'gt', 10).run();
@@ -188,42 +187,42 @@ describe('#aquery(data3).filter(\'color\', \'gt\', 5).run()', function () {
 
 describe('#aquery(data4).orderBy(\'color\').run()', function () {
     it('should return items ordered by color:', function () {
-        var result = aquery(data4).orderBy('color', 'desc', 'string').run();
+        var result = aquery(data4).orderBy('color', 'desc').run();
         assert.deepEqual(result, data4t1);
     });
 });
 
-describe('#aquery(data5).filter(\'size\', \'gt\', 10).orderBy(\'color\', \'desc\', \'string\').run()', function () {
+describe('#aquery(data5).filter(\'size\', \'gt\', 10).orderBy(\'color\', \'desc\').run()', function () {
     it('should return items ordered by color with size greater than 10:', function () {
-        var result = aquery(data5).filter('size', 'gt', 10).orderBy('color', 'desc', 'string').run();
+        var result = aquery(data5).filter('size', 'gt', 10).orderBy('color', 'desc').run();
         assert.deepEqual(result, data5t1);
     });
 });
 
-describe('#aquery(data5).filter(\'size\', \'gt\', 10).orderBy(\'color\', \'asc\', \'string\').run()', function () {
+describe('#aquery(data5).filter(\'size\', \'gt\', 10).orderBy(\'color\', \'asc\').run()', function () {
     it('should return items ordered by color ASC with size greater than 10:', function () {
-        var result = aquery(data5).filter('size', 'gt', 10).orderBy('color', 'asc', 'string').run();
+        var result = aquery(data5).filter('size', 'gt', 10).orderBy('color', 'asc').run();
         assert.deepEqual(result, data5t2);
     });
 });
 
-describe('#aquery(data5).filter(\'size\', \'gt\', 10).orderBy(\'color\', \'asc\', \'string\').offset(2).limit(3).run()', function () {
+describe('#aquery(data5).filter(\'size\', \'gt\', 10).orderBy(\'color\', \'asc\').offset(2).limit(3).run()', function () {
     it('should return items (offset 2 limit 3) ordered by color ASC with size greater than 10:', function () {
-        var result = aquery(data5).filter('size', 'gt', 10).orderBy('color', 'asc', 'string').offset(2).limit(3).run();
+        var result = aquery(data5).filter('size', 'gt', 10).orderBy('color', 'asc').offset(2).limit(3).run();
         assert.deepEqual(result, data5t3);
     });
 });
 
-describe('#aquery(data5).filter(\'size\', \'gt\', 10).orderBy(\'size\', \'desc\', \'string\').run()', function () {
+describe('#aquery(data5).filter(\'size\', \'gt\', 10).orderBy(\'size\', \'desc\').run()', function () {
     it('should return items ordered by size DESC with size greater than 10:', function () {
-        var result = aquery(data5).filter('size', 'gt', 10).orderBy('size', 'desc', 'string').run();
+        var result = aquery(data5).filter('size', 'gt', 10).orderBy('size', 'desc').run();
         assert.deepEqual(result, data5t4);
     });
 });
 
-describe('#aquery(data5).filter(\'size\', \'gt\', 10).orderBy(\'size\', \'asc\', \'string\').run()', function () {
+describe('#aquery(data5).filter(\'size\', \'gt\', 10).orderBy(\'size\', \'asc\').run()', function () {
     it('should return items ordered by size ASC with size greater than 10:', function () {
-        var result = aquery(data5).filter('size', 'gt', 10).orderBy('size', 'asc', 'string').run();
+        var result = aquery(data5).filter('size', 'gt', 10).orderBy('size', 'asc').run();
         assert.deepEqual(result, data5t5);
     });
 });

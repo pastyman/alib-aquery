@@ -100,7 +100,7 @@ module.exports = function alibFilter(arrayToFilter) {
     return this;
   };
 
-  var orderBy = function (prop, direction, type) {
+  var orderBy = function (prop, direction) {
     orderBySet = true;
     orderByProp = prop;
 
@@ -153,7 +153,6 @@ module.exports = function alibFilter(arrayToFilter) {
   //result passback, used at end of chain
   var run = function () {
     var offset = 0;
-    var limit = 0;
     var results = [];
     var resultsOrderBy = [];
 

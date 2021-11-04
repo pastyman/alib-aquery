@@ -27,7 +27,6 @@ import aquery from "alib-aquery";
 Then:
 
 ```js
-const aquery = require("alib-aquery");
 
 var data = [
   { color: "blue", size: 44 },

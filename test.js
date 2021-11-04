@@ -229,11 +229,8 @@ describe('#aquery(data5).filter(\'size\', \'gt\', 10).orderBy(\'size\', \'asc\')
 
 describe('#aquery(data3).registerFilter({function})', function () {
     it('should add a filter function to aquery:', function () {
-        var result = aquery().registerFilter('lengthof', function (a, b) {
-            if (a.length === b) {
-                return true;
-            }
-            return false;
+        var result = aquery().registerFilter('lengthof', (prop, value) => {
+            return prop.length === value ? true : false;
         });
         assert.deepEqual(result, null);
     });

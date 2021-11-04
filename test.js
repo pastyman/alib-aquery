@@ -166,7 +166,10 @@ describe('#aquery(data2).limit(10).run()', function () {
 
 describe('#aquery(data2).offset(3).limit(10).run()', function () {
     it('should return items 4 to 14 of array:', function () {
-        var result = aquery(data2).offset(3).limit(10).run();
+        var result = aquery(data2)
+            .offset(3)
+            .limit(10)
+            .run();
         assert.deepEqual(result, data2t3);
     });
 });

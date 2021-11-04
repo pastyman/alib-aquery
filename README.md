@@ -39,7 +39,9 @@ var data = [
   { color: "black", size: 12 },
 ];
 
-var result = aquery(data).filter("size", "gt", 10).run();
+var result = aquery(data)
+  .filter("size", "gt", 10)
+  .run();
 // return an array of items having the prop 'size' greater than 10
 // [
 //     { color: 'blue', size: 44 },
@@ -72,7 +74,10 @@ var result = aquery(data)
 //     { color: 'blue', size: 44 },
 // ]
 
-var result = aquery(data).filter("size", "gt", 10).orderBy("size", "asc").run();
+var result = aquery(data)
+  .filter("size", "gt", 10)
+  .orderBy("size", "asc")
+  .run();
 // return an array of items having the prop 'size' greater than 10 ordered by size ascending:
 // [
 //     { color: 'blue', size: 44 },
@@ -116,7 +121,9 @@ You can then use your filter function as follows:
 
 ```js
 
-var result = aquery(data3).filter("color", "lengthof", 3).run();
+var result = aquery(data3)
+  .filter("color", "lengthof", 3)
+  .run();
 // return an array of items having the prop 'color' with a string length of 3:
 // [
 //     { color: 'red', size: 18 },
